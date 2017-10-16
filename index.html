@@ -26,26 +26,44 @@
 <body>
 
 
-    <form action="">
+    <form action="" id="triviaquestions">
         Which of these songs was not a hit by Duran Duran?
-        <br><br>
-        Let's Dance<input type="radio" class="answer" value="1">
-        Hungry Like the Wolf<input type="radio" class="answer" value="2">
-        The Reflex<input type="radio" class="answer" value="2">
-        Union of the Snake<input type="radio" class="answer" value="2">
-
-<br><br>
-        Which of these last names are shared by three of the band's members who are not related?
-        <br><br>
-        Smith<input type="radio" class="answer" class="answer" value="2">
-        Jones<input type="radio" class="answer" value="2">
-        Brown<input type="radio" class="answer" value="2">
-        Taylor<input type="radio" class="answer" value="1">
-        </p>
+        <br>
+        <br> 
+        <input type="radio" id="correct" class="answer" name="questionone"> Let's Dance
+        <input type="radio" id="incorrect" class="answer" name="questionone"> Hungry Like the Wolf
+        <input type="radio" id="incorrect" class="answer" name="questionone"> The Reflex
+        <input type="radio" id="incorrect" class="answer" name="questionone"> Union of the Snake
 
 
-        <button type="button" class="btn btn-success done">Done</button>
+        <br>
+        <br> Which of these last names are shared by three of the band's members who are not related?
+        <br>
+        <br> 
+        <input type="radio" id="frown" class="answer" name="questiontwo"> Smith
+        <input type="radio" id="frown" class="answer" name="questiontwo"> Jones
+        <input type="radio" id="frown" class="answer" name="questiontwo"> Brown
+        <input type="radio" id="smile" class="answer" name="questiontwo"> Taylor
+        <br>
+        <br> Which of these colors is my favorite?
+        <br>
+        <br> 
+        <input type="radio" id="notaloop" class="answer" name="questionthree"> Red
+        <input type="radio" id="notaloop" class="answer" name="questionthree"> Blue
+        <input type="radio" id="loopsarefun" class="answer" name="questionthree"> Purple
+        <input type="radio" id="notaloop" class="answer" name="questionthree"> Green
+        <br>
+        <br>
+
     </form>
+
+
+    <button type="button" class="btn btn-success done">Done</button>
+
+    <div id="result">
+
+    </div>
+
 
 
 
