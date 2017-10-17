@@ -10,13 +10,17 @@ $(document).ready(function () {
 
     //how to code the return of the radio button selected and tell the computer to tally results when done button is pressed.
     $(".done").on("click", function () {
+            // alert($("input:radio").val());
+        
 
         if ($('input:radio[name="questionone"]:checked').val()) {
-
-            answer = (document.getElementById("correct").checked);
-            console.log(answer);
-            if (answer === true) {
-                alert("correct");
+            // alert($('input:radio').val());
+        
+        //     // function(index,currentvalue)
+        answer = (document.getElementById("dance").checked);
+        console.log(answer);
+        if (answer === true) {
+            alert("correct");
                 console.log("questionone");
                 result++;
 
@@ -29,7 +33,7 @@ $(document).ready(function () {
         }
 
         if ($('input:radio[name="questiontwo"]:checked').val()) {
-
+          
             answer = (document.getElementById("smile").checked);
             console.log(answer);
             
@@ -83,15 +87,6 @@ $(document).ready(function () {
 //     alert(val);
 // }
 
-//         console.log(i);
-
-//             console.log("yougotit");
-//         } else {
-//             console.log("wrong answer")
-//         }
-
-// }
-
 
 
 
@@ -127,6 +122,5 @@ $(document).ready(function () {
 
 
 
-// $(":radio")
 
 // * <input type="radio" onclick="if(this.checked){myFunction()}">
