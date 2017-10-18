@@ -10,17 +10,17 @@ $(document).ready(function () {
 
     //how to code the return of the radio button selected and tell the computer to tally results when done button is pressed.
     $(".done").on("click", function () {
-            // alert($("input:radio").val());
-        
+        // alert($("input:radio").val());
+
 
         if ($('input:radio[name="questionone"]:checked').val()) {
             // alert($('input:radio').val());
-        
-        //     // function(index,currentvalue)
-        answer = (document.getElementById("dance").checked);
-        console.log(answer);
-        if (answer === true) {
-            alert("correct");
+
+            //     // function(index,currentvalue)
+            answer = (document.getElementById("twodollars").checked);
+            console.log(answer);
+            if (answer === true) {
+                alert("correct");
                 console.log("questionone");
                 result++;
 
@@ -33,10 +33,10 @@ $(document).ready(function () {
         }
 
         if ($('input:radio[name="questiontwo"]:checked').val()) {
-          
-            answer = (document.getElementById("smile").checked);
+
+            answer = (document.getElementById("nothing").checked);
             console.log(answer);
-            
+
             if (answer === true) {
                 alert("correct");
                 console.log("questiontwo");
@@ -52,7 +52,7 @@ $(document).ready(function () {
 
         if ($('input:radio[name="questionthree"]:checked').val()) {
 
-            answer = (document.getElementById("loopsarefun").checked);
+            answer = (document.getElementById("jennifer").checked);
             console.log(answer);
             if (answer === true) {
                 alert("correct");
@@ -62,6 +62,144 @@ $(document).ready(function () {
             } else {
                 alert("incorrect");
                 console.log("questionthree");
+            }
+        }
+
+        if ($('input:radio[name="questionfour"]:checked').val()) {
+
+            answer = (document.getElementById("jeans").checked);
+            console.log(answer);
+
+            if (answer === true) {
+                alert("correct");
+                console.log("questionfour");
+                result++;
+
+            } else {
+                alert("incorrect");
+                console.log("questionfour");
+
+            }
+        }
+
+        if ($('input:radio[name="questionfive"]:checked').val()) {
+
+            answer = (document.getElementById("yellow").checked);
+            console.log(answer);
+
+            if (answer === true) {
+                alert("correct");
+                console.log("questionfive");
+                result++;
+
+            } else {
+                alert("incorrect");
+                console.log("questionfive");
+
+            }
+        }
+
+        if ($('input:radio[name="questionsix"]:checked').val()) {
+
+            answer = (document.getElementById("tenderness").checked);
+            console.log(answer);
+
+            if (answer === true) {
+                alert("correct");
+                console.log("questionsix");
+                result++;
+
+            } else {
+                alert("incorrect");
+                console.log("questionsix");
+
+            }
+        }
+
+        if ($('input:radio[name="questionseven"]:checked').val()) {
+
+            answer = (document.getElementById("dull").checked);
+            console.log(answer);
+
+            if (answer === true) {
+                alert("correct");
+                console.log("questionseven");
+                result++;
+
+            } else {
+                alert("incorrect");
+                console.log("questionseven");
+
+            }
+        }
+
+        if ($('input:radio[name="questioneight"]:checked').val()) {
+
+            answer = (document.getElementById("frances").checked);
+            console.log(answer);
+
+            if (answer === true) {
+                alert("correct");
+                console.log("questioneight");
+                result++;
+
+            } else {
+                alert("incorrect");
+                console.log("questioneight");
+
+            }
+        }
+
+        if ($('input:radio[name="questionnine"]:checked').val()) {
+
+            answer = (document.getElementById("banana").checked);
+            console.log(answer);
+
+            if (answer === true) {
+                alert("correct");
+                console.log("questionnine");
+                result++;
+
+            } else {
+                alert("incorrect");
+                console.log("questionnine");
+
+            }
+        }
+
+        if ($('input:radio[name="questionten"]:checked').val()) {
+            
+                        answer = (document.getElementById("conceive").checked);
+                        console.log(answer);
+            
+                        if (answer === true) {
+                            alert("correct");
+                            console.log("questionten");
+                            result++;
+            
+                        } else {
+                            alert("incorrect");
+                            console.log("questionten");
+            
+                        }
+                    }
+            
+                    $("#result").text(result);
+
+        if ($('input:radio[name="questionbonus"]:checked').val()) {
+
+            answer = (document.getElementById("fire").checked);
+            console.log(answer);
+
+            if (answer === true) {
+                alert("correct");
+                console.log("questionbonus");
+                result++;
+
+            } else {
+                alert("incorrect");
+                console.log("questionbonus");
+
             }
         }
 
