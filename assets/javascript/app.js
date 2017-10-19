@@ -1,37 +1,59 @@
 $(document).ready(function () {
 
 
+    var number = 300;
+    var intervalId;
 
-    var value = "";
+
+    function timer() {
+        intervalId = setInterval(decrement, 1000);
+    }
+
+    function decrement() {
+        if (number === 0) {
+            stop();
+            alert("Sorry, you are out of time!");
+        } else {
+            $("#timeleft").text(number);
+            number--;
+        }
+    }
+
+    function stop() {
+        clearInterval(intervalId);
+    }
+
+
     var result = 0;
     var answer = 0;
-    i = 0;
+    var unanswered = 0;
 
+    name = ["questionone", "questiontwo", "questionthree", "questionfour", "questionfive", "questionsix", "questionseven", "questioneight", "questionnine", "questionten", "questionbonus"];
+
+    timer();
 
     //how to code the return of the radio button selected and tell the computer to tally results when done button is pressed.
     $(".done").on("click", function () {
-        // alert($("input:radio").val());
 
+        stop();
 
         if ($('input:radio[name="questionone"]:checked').val()) {
-            // alert($('input:radio').val());
 
-            //     // function(index,currentvalue)
             answer = (document.getElementById("twodollars").checked);
             console.log(answer);
             if (answer === true) {
                 alert("correct");
                 console.log("questionone");
                 result++;
-
-
             } else {
                 alert("incorrect");
                 console.log("questionone");
 
             }
+        } else {
+            unanswered++;
+            console.log("didn't answer");
         }
-
         if ($('input:radio[name="questiontwo"]:checked').val()) {
 
             answer = (document.getElementById("nothing").checked);
@@ -47,9 +69,10 @@ $(document).ready(function () {
                 console.log("questiontwo");
 
             }
+        } else {
+            unanswered++;
+            console.log("didn't answer");
         }
-
-
         if ($('input:radio[name="questionthree"]:checked').val()) {
 
             answer = (document.getElementById("jennifer").checked);
@@ -63,8 +86,10 @@ $(document).ready(function () {
                 alert("incorrect");
                 console.log("questionthree");
             }
+        } else {
+            unanswered++;
+            console.log("didn't answer");
         }
-
         if ($('input:radio[name="questionfour"]:checked').val()) {
 
             answer = (document.getElementById("jeans").checked);
@@ -80,6 +105,9 @@ $(document).ready(function () {
                 console.log("questionfour");
 
             }
+        } else {
+            unanswered++;
+            console.log("didn't answer");
         }
 
         if ($('input:radio[name="questionfive"]:checked').val()) {
@@ -97,8 +125,10 @@ $(document).ready(function () {
                 console.log("questionfive");
 
             }
+        } else {
+            unanswered++;
+            console.log("didn't answer");
         }
-
         if ($('input:radio[name="questionsix"]:checked').val()) {
 
             answer = (document.getElementById("tenderness").checked);
@@ -114,6 +144,9 @@ $(document).ready(function () {
                 console.log("questionsix");
 
             }
+        } else {
+            unanswered++;
+            console.log("didn't answer");
         }
 
         if ($('input:radio[name="questionseven"]:checked').val()) {
@@ -131,8 +164,10 @@ $(document).ready(function () {
                 console.log("questionseven");
 
             }
+        } else {
+            unanswered++;
+            console.log("didn't answer");
         }
-
         if ($('input:radio[name="questioneight"]:checked').val()) {
 
             answer = (document.getElementById("frances").checked);
@@ -148,8 +183,10 @@ $(document).ready(function () {
                 console.log("questioneight");
 
             }
+        } else {
+            unanswered++;
+            console.log("didn't answer");
         }
-
         if ($('input:radio[name="questionnine"]:checked').val()) {
 
             answer = (document.getElementById("banana").checked);
@@ -165,27 +202,29 @@ $(document).ready(function () {
                 console.log("questionnine");
 
             }
+        } else {
+            unanswered++;
+            console.log("didn't answer");
         }
-
         if ($('input:radio[name="questionten"]:checked').val()) {
-            
-                        answer = (document.getElementById("conceive").checked);
-                        console.log(answer);
-            
-                        if (answer === true) {
-                            alert("correct");
-                            console.log("questionten");
-                            result++;
-            
-                        } else {
-                            alert("incorrect");
-                            console.log("questionten");
-            
-                        }
-                    }
-            
-                    $("#result").text(result);
 
+            answer = (document.getElementById("conceive").checked);
+            console.log(answer);
+
+            if (answer === true) {
+                alert("correct");
+                console.log("questionten");
+                result++;
+
+            } else {
+                alert("incorrect");
+                console.log("questionten");
+
+            }
+        } else {
+            unanswered++;
+            console.log("didn't answer");
+        }
         if ($('input:radio[name="questionbonus"]:checked').val()) {
 
             answer = (document.getElementById("fire").checked);
@@ -201,6 +240,9 @@ $(document).ready(function () {
                 console.log("questionbonus");
 
             }
+        } else {
+            unanswered++;
+            console.log("didn't answer");
         }
 
         $("#result").text(result);
