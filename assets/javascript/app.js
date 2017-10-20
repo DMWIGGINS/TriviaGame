@@ -29,7 +29,9 @@ $(document).ready(function () {
     var unanswered = 0;
 
     name = ["questionone", "questiontwo", "questionthree", "questionfour", "questionfive", "questionsix", "questionseven", "questioneight", "questionnine", "questionten", "questionbonus"];
-
+    correct = ["twodollars", "nothing", "jennifer", "jeans", "yellow", "tenderness", "dull", "frances", "banana", "conceive", "fire"];
+    
+    
     timer();
 
     //how to code the return of the radio button selected and tell the computer to tally results when done button is pressed.
