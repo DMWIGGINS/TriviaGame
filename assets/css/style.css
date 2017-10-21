@@ -9,7 +9,8 @@ body {
 
 h1,
 h3 {
-    color: rgb(145, 9, 9);
+    font-family: 'Fascinate Inline', cursive;
+    color: black;
 }
 
 h2,
@@ -27,6 +28,7 @@ h5 {
 #weirdscience,
 #ferris,
 #duckie,
+#duckie2,
 #molly {
     border-width: 2px;
     border-color: black;
@@ -39,6 +41,5 @@ h5 {
 
 #timeleft {
     font-size: 20px;
-    color: rgb(145, 9, 9);
-
+    color: rgb(104, 1, 1);
 }
