@@ -1,6 +1,6 @@
-#80's Movie Trivia
+# 80's Movie Trivia
 
-Test your knowledge of some classic 80's movies with this timed multiple choice trivia game!
+## Test your knowledge of some classic 80's movies with this timed multiple choice trivia game!
 
 
 
