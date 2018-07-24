@@ -5,6 +5,8 @@
 
 
 <img id="ferris" src="assets/images/ferris.jpg">
+<img id="ferris" src="assets/images/ferris.jpg">
+<img id="ferris" src="assets/images/ferris.jpg">
 
 
 
