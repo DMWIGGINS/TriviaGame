@@ -8,7 +8,7 @@
 
 
 
-*_Created with HTML, CSS, JavaScript._*
+*Created with HTML, CSS, JavaScript.*
 
 
 
