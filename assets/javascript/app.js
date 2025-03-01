@@ -37,103 +37,281 @@ $(document).ready(function () {
     // storing the questions and answers in an object so program is easy to reuse with new questions
 
     const Trivia = {
-                    QuestionOne:{Heading:"Better Off Dead",
+                    QuestionOne:{
+                        Heading:"Better Off Dead",
+                                 Image: {
+                                    ImageId: "betteroffdead",
+                                    ImageSrc: "assets/images/betteroffdead.jpg"
+                                },
                                   QuestionText: "What is the paperboy stalking Lane for?",
                                 Answers: {
-                                    Correct:"His two dollars", 
-                                    InCorrect: [
-                                                "His skiis", 
+                                    Correct:["His two dollars"],
+                                    Incorrect: [
+                                            "His skiis", 
                                                 "His bike", 
                                                 "His apple"]
                                             }
                                         },
-                    QuestionTwo:"Why is the 'crazy girl' in detention?",
+                    QuestionTwo:{
+                        Heading:"The Breakfast Club",
+                        Image: {
+                            ImageId: "breakfastclub",
+                            ImageSrc: "assets/images/breakfastclub.jpg"
+                        },
+                        QuestionText:"Why is the 'crazy girl' in detention?",
                                 Answers: {
-                                    Correct:"She had nothing better to do on a Saturday",
-                                    InCorrect: [
+                                    Correct: ["She had nothing better to do on a Saturday"],
+                                    Incorrect: [
                                                "She tripped a popular kid in the cafeteria" ,
                                                "She is a mole for the teachers",
                                                "She was caught selling drugs"
                                               ]
+                                            }
                                              },
-                    QuestionThree:"Who played Ferris' cranky sister?",
+                    QuestionThree:{
+                        Heading:"Ferris Buellers' Day Off",
+                        Image: {
+                           ImageId: "ferris2d",
+                           ImageSrc: "assets/images/ferris2.jpg"
+                       },
+                       QuestionText:"Who played Ferris' cranky sister?",
                                 Answers: {
-                                    Correct:"Jennifer Grey", 
-                                    InCorrect: [
+                                    Correct: ["Jennifer Grey"], 
+                                    Incorrect: [
                                                 "Mia Sara", 
                                                 "Demi Moore", 
                                                 "Phoebe Cates"]
+                                    }
                                             },
-                    QuestionFour:"What did Gary and Wyatt wear when showering with the woman they created??",
+                    QuestionFour:{
+                        Heading:"Weird Science",
+                        Image: {
+                           ImageId: "weirdscience",
+                           ImageSrc: "assets/images/weirdscience.jpg"
+                       },
+                       QuestionText:"What did Gary and Wyatt wear when showering with the woman they created?",
                                 Answers: {
-                                    Correct:"Jeans", 
-                                    InCorrect: [
+                                    Correct: ["Jeans"], 
+                                    Incorrect: [
                                                 "Sexy speedos", 
                                                 "Flotation Devices", 
                                                 "Smiles"]
+                                    }
                                             },
-                    QuestionFive:"What color car did Daniel choose as a birthday present from Mr. Miyagi?",
+                    QuestionFive:{
+                        Heading:"The Karate Kid",
+                        Image: {
+                           ImageId: "karatekid",
+                           ImageSrc: "assets/images/karatekid.jpg"
+                       },
+                       QuestionText:"What color car did Daniel choose as a birthday present from Mr. Miyagi?",
                                 Answers: {
-                                    Correct:"Yellow", 
-                                    InCorrect: [
+                                    Correct: ["Yellow"], 
+                                    Incorrect: [
                                                 "White", 
                                                 "Light Blue", 
                                                 "Silver"]
+                                    }
                                             },
-                    QuestionSix:"What song did Duckie lip-sync his heart out to at the record store?",
+                    QuestionSix:{
+                        Heading:"Pretty in Pink",
+                        Image: {
+                           ImageId: "duckie",
+                           ImageSrc: "assets/images/duckie.jpg"
+                       },
+                       QuestionText:"What song did Duckie lip-sync his heart out to at the record store?",
                                 Answers: {
-                                    Correct:"Try a Little Tenderness", 
-                                    InCorrect: [
+                                    Correct: ["Try a Little Tenderness"], 
+                                    Incorrect: [
                                                 "Let's Get it On", 
                                                 "Sexual Healing", 
                                                 "Superfreak"]
+                                    }
                                             },
-                    QuestionSeven:"What does 'All work and no play' make Jack?",
+                    QuestionSeven:{
+                        Heading:"The Shining",
+                        Image: {
+                           ImageId: "theshining2",
+                           ImageSrc: "assets/images/shining2.jpg"
+                       },
+                       QuestionText:"What does 'All work and no play' make Jack?",
                                 Answers: {
-                                    Correct:"A dull boy", 
-                                    InCorrect: [
+                                    Correct: ["A dull boy"], 
+                                    Incorrect: [
                                                 "A psycho killer", 
                                                 "Really boring", 
                                                 "A weirdo"]
+                                    }
                                             },
-                    QuestionEight:"What is Baby's real name?",
+                    QuestionEight:{
+                        Heading:"Dirty Dancing",
+                        Image: {
+                           ImageId: "dirtydancing",
+                           ImageSrc: "assets/images/dirtydancing.jpg"
+                       },
+                       QuestionText:"What is Baby's real name?",
                                 Answers: {
-                                    Correct:"Frances", 
-                                    InCorrect: [
+                                    Correct: ["Frances"], 
+                                    Incorrect: [
                                                 "Alma", 
                                                 "Agnes", 
                                                 "Ingrid"]
+                                    }
                                             },
-                    QuestionNine:"When the ghosts temporarily possessed the family during dinner, what song did they make them sing and dance to?",
+                    QuestionNine:{
+                        Heading:"Beetlejuice",
+                        Image: {
+                           ImageId: "beetlejuice",
+                           ImageSrc: "assets/images/beetlejuice.jpg"
+                       },
+                       QuestionText:"When the ghosts temporarily possessed the family during dinner, what song did they make them sing and dance to?",
                                 Answers: {
-                                    Correct:"The Banana Boat Song", 
-                                    InCorrect: [
+                                    Correct: ["The Banana Boat Song"], 
+                                    Incorrect: [
                                                 "The Monster Mash", 
                                                 "Purple People Eater", 
                                                 "Thriller"]
+                                    }
                                             },
-                    QuestionTen:"What word did the clergyman with the speech impediment love to say?",
+                    QuestionTen:{
+                        Heading:"The Princess Bride",
+                        Image: {
+                           ImageId: "princessbride",
+                           ImageSrc: "assets/images/princessbride.jpg"
+                       },
+                       QuestionText:"What word did the clergyman with the speech impediment love to say?",
                                 Answers: {
-                                    Correct:"Inconceivable", 
-                                    InCorrect: [
+                                    Correct: ["Inconceivable"], 
+                                    Incorrect: [
                                                 "Unbelievable", 
                                                 "Irretrievable", 
                                                 "Irresponsible"]
+                                    }
                                             },
-                    QuestionBonus: "Which of the following movies did NOT star Molly Ringwald",
+                    QuestionBonus: {
+                        Heading:"Multi-Movie Bonus",
+                        Image: {
+                           ImageId: "molly",
+                           ImageSrc: "assets/images/molly.jpg"
+                       },
+                       QuestionText:"Which of the following movies did NOT star Molly Ringwald",
                                 Answers: {
-                                 Correct:"St Elmo's Fire", 
-                                 InCorrect: [
+                                 Correct: ["St Elmo's Fire"], 
+                                 Incorrect: [
                                                 "Sixteen Candles", 
                                                 "The Breakfast Club", 
                                                 "Pretty in Pink"]
-                                             },
+                                 }
+                                             }
                                         };
 
   
+                       //                 <h2 id="heading"></h2>
+                         //               <img id="imgtitle">
+                           //             <h4 id="question"></h4>
 
+     
+    
+                           
+                          
+                         //  console.log(' trivia is ' + Trivia);  // This will log the number of questions in the Trivia object
+                           //console.log('object.keys trivia 4 is' + Object.keys(Trivia)[4]);
+                           //console.log('the answers in questionFive are' + Trivia[Object.keys(Trivia)[4]].Answers);
+                           //console.log('the length of the answers array is' + (Trivia[Object.keys(Trivia)[4]].Answers).length);
+    
+
+                         
+                         
+      // Loop through each question in the Trivia object and add them to the UI
+
+
+      function loadquestions() {
+
+        //
+        for (let questionKey in Trivia) {
+
+            let question = Trivia[questionKey];
+
+        //create div for each questionKey
+            let triviaItem =$("<div>");
+            triviaItem.addClass("well");
+
+        //add heading 
+            let heading = $("<h2>");
+            heading.text(question.Heading);
+            triviaItem.append(heading);
+
+        //add image 
+            let image = $("<img>");
+            image.attr('id', question.Image.ImageId);
+            image.attr('src', question.Image.ImageSrc)
+            triviaItem.append(image);
+            //console.log(Trivia.QuestionOne.Heading)
+
+        //add question text
+            let quizItem = $("<h4>");
+            quizItem.text(question.QuestionText);
+            triviaItem.append(quizItem);
+
+        //put correct and incorrect answers in array and shuffle             
+            let correctAnswers = question.Answers.Correct;
+            let incorrectAnswers = question.Answers.Incorrect;
+            let allAnswers = correctAnswers.concat(incorrectAnswers);
+            allAnswers.sort(function() {
+                return Math.random() - 0.5;
+            });
+
+          //create a radiobutton for each question with and a label that displays the answer
+            let answerBlock = $("<div>");
+            for (j = 0; j < allAnswers.length; j++) {
+                let radioButton = $("<input>");
+                radioButton.attr('type', 'radio');
+                radioButton.val(allAnswers[j]);
+                radioButton.attr('name', question);
+                let label = $("<label>");
+                label.text(" " + allAnswers[j]);
+               //add each radioButton and label to the answerBlock
+                answerBlock.append(radioButton);
+                answerBlock.append(label);
+            }
+
+            // Add the answerBlock to the triviaItem div
+            triviaItem.append(answerBlock);
+            console.log(incorrectAnswers);
+            console.log(correctAnswers);
+            console.log(allAnswers);
+          
+         
+     
+          // Add the trivaItem to the #triviaquestions div 
+      
+         
+          $("#triviaquestions").append(triviaItem);
+            
+        }
+
+      }
+
+
+      function tallyAnswers() {
+
+        for (let questionKey in Trivia) {
+
+            let question = Trivia[questionKey];
+
+            
+
+        }
+        
+    }
+loadquestions();
+                  
+             
+  
    
-   $("#testing").text(Trivia.QuestionOne.Answers.InCorrect[0])
+  // $("#heading").text(Trivia.QuestionOne.Heading)
+  // $("#imgtitle").text(Trivia.QuestionOne.ImgSrc)
+  // $("#question").text(Trivia.QuestionOne.QuestionText)
 
     // variables for correct answer counter, if question was answered correctly(boolean), unanswered counter, and incorrect counter
 
@@ -156,6 +334,8 @@ $(document).ready(function () {
 
         // determine if question was answered - was a radio button selected?
 
+
+
         if ($('input:radio[name="questionone"]:checked').val()) {
 
             answer = (document.getElementById("twodollars").checked);
@@ -177,218 +357,7 @@ $(document).ready(function () {
             unanswered++;
         }
 
-        // determine if question was answered - was a radio button selected?
-
-        if ($('input:radio[name="questiontwo"]:checked').val()) {
-
-            answer = (document.getElementById("nothing").checked);
-
-            //  Is it the correct answer? Add 1 to result
-
-            if (answer === true) {
-                result++;
-
-                // For wrong answer add 1 to incorrect
-
-            } else {
-                incorrect++;
-            }
-
-            // if no answer selected, add 1 to unanswered
-
-        } else {
-            unanswered++;
-        }
-
-            // determine if question was answered - was a radio button selected?
-
-        if ($('input:radio[name="questionthree"]:checked').val()) {
-
-            answer = (document.getElementById("jennifer").checked);
-
-            //  Is it the correct answer? Add 1 to result
-
-            if (answer === true) {
-                result++;
-
-                // For wrong answer add 1 to incorrect
-
-            } else {
-                incorrect++;
-            }
-            // if no answer selected, add 1 to unanswered
-
-        } else {
-            unanswered++;
-        }
-        // determine if question was answered - was a radio button selected?
-        if ($('input:radio[name="questionfour"]:checked').val()) {
-
-            answer = (document.getElementById("jeans").checked);
-
-            //  Is it the correct answer? Add 1 to result
-
-            if (answer === true) {
-                result++;
-
-                // For wrong answer add 1 to incorrect
-
-            } else {
-                incorrect++;
-            }
-
-            // if no answer selected, add 1 to unanswered
-
-        } else {
-            unanswered++;
-        }
-
-        // determine if question was answered - was a radio button selected?
-
-        if ($('input:radio[name="questionfive"]:checked').val()) {
-
-            answer = (document.getElementById("yellow").checked);
-
-            //  Is it the correct answer? Add 1 to result
-
-            if (answer === true) {
-                result++;
-
-                // For wrong answer add 1 to incorrect
-
-            } else {
-                incorrect++;
-            }
-
-            // if no answer selected, add 1 to unanswered
-
-        } else {
-            unanswered++;
-        }
-        // determine if question was answered - was a radio button selected?
-
-        if ($('input:radio[name="questionsix"]:checked').val()) {
-
-            answer = (document.getElementById("tenderness").checked);
-
-            //  Is it the correct answer? Add 1 to result
-
-            if (answer === true) {
-                result++;
-
-                // For wrong answer add 1 to incorrect
-
-            } else {
-                incorrect++;
-            }
-
-            // if no answer selected, add 1 to unanswered
-
-        } else {
-            unanswered++;
-        }
-
-        // determine if question was answered - was a radio button selected?
-
-        if ($('input:radio[name="questionseven"]:checked').val()) {
-
-            answer = (document.getElementById("dull").checked);
-
-            //  Is it the correct answer? Add 1 to result
-
-            if (answer === true) {
-                result++;
-                // For wrong answer add 1 to incorrect
-
-            } else {
-                incorrect++;
-            }
-            // if no answer selected, add 1 to unanswered
-
-        } else {
-            unanswered++;
-        }
-
-        // determine if question was answered - was a radio button selected?
-
-        if ($('input:radio[name="questioneight"]:checked').val()) {
-
-            answer = (document.getElementById("frances").checked);
-
-            //  Is it the correct answer? Add 1 to result
-
-            if (answer === true) {
-                result++;
-                // For wrong answer add 1 to incorrect
-
-            } else {
-                incorrect++;
-            }
-            // if no answer selected, add 1 to unanswered
-
-        } else {
-            unanswered++;
-        }
-        // determine if question was answered - was a radio button selected?
-
-        if ($('input:radio[name="questionnine"]:checked').val()) {
-
-            answer = (document.getElementById("banana").checked);
-            //  Is it the correct answer? Add 1 to result
-
-            if (answer === true) {
-                result++;
-                // For wrong answer add 1 to incorrect
-
-            } else {
-                incorrect++;
-
-            }
-            // if no answer selected, add 1 to unanswered
-
-        } else {
-            unanswered++;
-        }
-        // determine if question was answered - was a radio button selected?
-
-        if ($('input:radio[name="questionten"]:checked').val()) {
-
-            answer = (document.getElementById("conceive").checked);
-            //  Is it the correct answer? Add 1 to result
-
-            if (answer === true) {
-                result++;
-
-                // For wrong answer add 1 to incorrect
-
-            } else {
-                incorrect++;
-
-            }
-            // if no answer selected, add 1 to unanswered
-
-        } else {
-            unanswered++;
-        }
-        // determine if question was answered - was a radio button selected?
-
-        if ($('input:radio[name="questionbonus"]:checked').val()) {
-
-            answer = (document.getElementById("fire").checked);
-            //  Is it the correct answer? Add 1 to result
-
-            if (answer === true) {
-                result++;
-                // For wrong answer add 1 to incorrect
-
-            } else {
-                incorrect++;
-            }
-            // if no answer selected, add 1 to unanswered
-
-        } else {
-            unanswered++;
-        }
+  
         // determine how many unanswered questions
 
         unanswered = 11 - (result + incorrect);
