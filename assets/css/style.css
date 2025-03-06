@@ -1,5 +1,6 @@
 .well {
     margin-top: 75px;
+    margin-bottom: 0px;
     background-color: rgba(241, 58, 58, 0.692);
     
 }
@@ -41,12 +42,12 @@ h5 {
 #breakfastclub,
 #karatekid,
 #beetlejuice,
-#theshining2,
+#theshining,
 #dirtydancing,
 #princessbride,
 #weirdscience,
 #ferris,
-#ferris2,
+#artmuseum,
 #duckie,
 #duckie2,
 #molly {
@@ -59,5 +60,10 @@ h5 {
     font-size: 40px;
     font-weight: bolder;
     color: rgb(239, 229, 229);
+}
+
+#done {
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 

@@ -72,7 +72,7 @@ $(document).ready(function () {
                         Heading:"Ferris Buellers' Day Off",
                         Image: {
                            ImageId: "ferris2d",
-                           ImageSrc: "assets/images/ferris2.jpg"
+                           ImageSrc: "assets/images/artmuseum.jpg"
                        },
                        QuestionText:"Who played Ferris' cranky sister?",
                                 Answers: {
@@ -132,7 +132,7 @@ $(document).ready(function () {
                         Heading:"The Shining",
                         Image: {
                            ImageId: "theshining2",
-                           ImageSrc: "assets/images/shining2.jpg"
+                           ImageSrc: "assets/images/shining.jpg"
                        },
                        QuestionText:"What does 'All work and no play' make Jack?",
                                 Answers: {
@@ -234,29 +234,30 @@ $(document).ready(function () {
 
         //create well for each questionKey (bootstrap styling)
             let triviaItem =$("<div>");
-            triviaItem.addClass("well");
+            triviaItem.addClass("row");
 
         //add row class (bootstrap styling)
-            let row = $("<div>");
-            row.addClass("row");
-            triviaItem.append(row);
+            let well = $("<div>");
+            well.addClass("well");
+            //triviaItem.append(well);
 
         //add heading 
             let heading = $("<h2>");
             heading.text(question.Heading);
-            triviaItem.append(heading);
+           // triviaItem.append(heading);
+            well.append(heading);
 
         //add image 
             let image = $("<img>");
             image.attr('id', question.Image.ImageId);
             image.attr('src', question.Image.ImageSrc);
-            triviaItem.append(image);
+            well.append(image);
             //console.log(Trivia.QuestionOne.Heading)
 
         //add question text
             let quizItem = $("<h4>");
             quizItem.text(question.QuestionText);
-            triviaItem.append(quizItem);
+            well.append(quizItem);
 
         //put correct and incorrect answers in array and shuffle             
             let correctAnswers = question.Answers.Correct;
@@ -281,7 +282,8 @@ $(document).ready(function () {
             }
 
             // Add the answerBlock to the triviaItem div
-            triviaItem.append(answerBlock);
+            well.append(answerBlock);
+            triviaItem.append(well);
             console.log(incorrectAnswers);
             console.log(correctAnswers);
             console.log(allAnswers);
