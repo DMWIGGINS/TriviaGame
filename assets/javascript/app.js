@@ -232,9 +232,14 @@ $(document).ready(function () {
 
             let question = Trivia[questionKey];
 
-        //create div for each questionKey
+        //create well for each questionKey (bootstrap styling)
             let triviaItem =$("<div>");
             triviaItem.addClass("well");
+
+        //add row class (bootstrap styling)
+            let row = $("<div>");
+            row.addClass("row");
+            triviaItem.append(row);
 
         //add heading 
             let heading = $("<h2>");
@@ -244,7 +249,7 @@ $(document).ready(function () {
         //add image 
             let image = $("<img>");
             image.attr('id', question.Image.ImageId);
-            image.attr('src', question.Image.ImageSrc)
+            image.attr('src', question.Image.ImageSrc);
             triviaItem.append(image);
             //console.log(Trivia.QuestionOne.Heading)
 

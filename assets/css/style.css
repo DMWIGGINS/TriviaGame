@@ -1,4 +1,10 @@
-.row {
+.well {
+    margin-top: 75px;
+    background-color: rgba(241, 58, 58, 0.692);
+    
+}
+
+#newtrivia {
     text-align: center;
 }
 
@@ -8,16 +14,29 @@ body {
 }
 
 h1,
-h3 {
-    font-family: 'Fascinate Inline', cursive;
+h3 { 
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
     color: black;
 }
 
 h2,
 h5 {
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
     color: black;
 }
-
+.answer {
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    color: black;
+}
 #betteroffdead,
 #breakfastclub,
 #karatekid,
@@ -27,6 +46,7 @@ h5 {
 #princessbride,
 #weirdscience,
 #ferris,
+#ferris2,
 #duckie,
 #duckie2,
 #molly {
@@ -35,11 +55,9 @@ h5 {
     border-style: solid;
 }
 
-.well {
-    background-color: rgb(216, 55, 55);
+#timeleft {
+    font-size: 40px;
+    font-weight: bolder;
+    color: rgb(239, 229, 229);
 }
 
-#timeleft {
-    font-size: 20px;
-    color: rgb(104, 1, 1);
-}
