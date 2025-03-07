@@ -3,7 +3,12 @@
     position: sticky;
     top: 0;
     z-index: 1;
-    background-image: url(../images/movie-theater-denise-jans.jpg);
+    background-image: url(../images/rob-laughter-WW1jsInXgwM-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right top;
+    
+
 
    
 }
@@ -12,10 +17,19 @@
     border-style: solid;
     border-color: black;
     border-width: 5px;
-    margin-left: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 80%;
+    width: 100%;
+    
+
+
+  /*  margin-left: 400px;
     margin-right: 400px;
     margin-bottom: 40px;
     margin-top: 40px;
+    */
+    
 
 }
 
@@ -23,17 +37,14 @@
 .well {
     margin-top: 0px;
     margin-bottom: 75px;
-   /* background-color: rgba(241, 58, 58, 0.692);*/
     background-color: #b60a28;
 }
 
-#newtrivia {
-    text-align: center;
-}
 
 body {
    background-image: url(../images/dark-triangles.png);
     color: black;
+    text-align: center;
 }
 .jumbotron {
     background-color: #b60a28;
@@ -94,8 +105,10 @@ label, input {
     color: rgb(194, 37, 37);
 }
 
-#done {
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
 
+#done { 
+    color: white;
+    background-color:#b60a28;
+    margin-bottom: 10px;
+
+}
