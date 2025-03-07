@@ -1,8 +1,30 @@
+
+#intro {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-image: url(../images/movie-theater-denise-jans.jpg);
+
+   
+}
+#moviescreen {
+    background-color:white;
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+
+}
+
+
 .well {
-    margin-top: 75px;
-    margin-bottom: 0px;
-    background-color: rgba(241, 58, 58, 0.692);
-    
+    margin-top: 0px;
+    margin-bottom: 75px;
+   /* background-color: rgba(241, 58, 58, 0.692);*/
+    background-color: #b60a28;
 }
 
 #newtrivia {
@@ -10,8 +32,12 @@
 }
 
 body {
-    background-image: url(../images/dark-triangles.png);
+   background-image: url(../images/dark-triangles.png);
     color: black;
+}
+.jumbotron {
+    background-color: #b60a28;
+    
 }
 
 h1,
@@ -31,6 +57,7 @@ h5 {
     font-style: normal;
     color: black;
 }
+
 .answer {
     font-family: "Figtree", sans-serif;
     font-optical-sizing: auto;
@@ -38,6 +65,11 @@ h5 {
     font-style: normal;
     color: black;
 }
+
+label, input {
+    display: inline-block;
+}
+
 #betteroffdead,
 #breakfastclub,
 #karatekid,
@@ -59,7 +91,7 @@ h5 {
 #timeleft {
     font-size: 40px;
     font-weight: bolder;
-    color: rgb(239, 229, 229);
+    color: rgb(194, 37, 37);
 }
 
 #done {

@@ -270,13 +270,32 @@ $(document).ready(function () {
           //create a radiobutton for each question with and a label that displays the answer
             let answerBlock = $("<div>");
             for (j = 0; j < allAnswers.length; j++) {
+              //  let label = $("<label>");
+               // let radioButton = $("<input>");
+               // radioButton.attr('type', 'radio');
+               // radioButton.val(allAnswers[j]);
+               // radioButton.attr('name', question);
+               // let span = $("<span>");
+               // span.addClass('wrappable');
+               // span.text(allAnswers[j]);
+
+                //add span to radioButton
+                //radioButton.append(span);
+
+                //add radioButton to label
+                //label.append(radioButton);
+
+
+                //add label to answerBlock
+               // answerBlock.append(label);
+
                 let radioButton = $("<input>");
                 radioButton.attr('type', 'radio');
                 radioButton.val(allAnswers[j]);
                 radioButton.attr('name', question);
                 let label = $("<label>");
                 label.text(" " + allAnswers[j]);
-               //add each radioButton and label to the answerBlock
+                // add each radioButton and label to the answerBlock
                 answerBlock.append(radioButton);
                 answerBlock.append(label);
             }
