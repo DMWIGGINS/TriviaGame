@@ -90,7 +90,7 @@ label, input {
 #princessbride,
 #weirdscience,
 #ferris,
-#artmuseum,
+#ferrisandfriends,
 #duckie,
 #duckie2,
 #molly {
@@ -108,7 +108,7 @@ label, input {
 
 #done { 
     color: white;
-    background-color:#b60a28;
+    background-color:rgb(182, 10, 40);
     margin-bottom: 10px;
 
 }

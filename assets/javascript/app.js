@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     // set variables for timer
 
-    var number = 10;
+    var number = 60;
     var intervalId;
 
     // create timer to countdown
@@ -71,8 +71,8 @@ $(document).ready(function () {
                     QuestionThree:{
                         Heading:"Ferris Buellers' Day Off",
                         Image: {
-                           ImageId: "ferris2d",
-                           ImageSrc: "assets/images/artmuseum.jpg"
+                           ImageId: "ferrisandfriends",
+                           ImageSrc: "assets/images/ferrisandfriends.jpg"
                        },
                        QuestionText:"Who played Ferris' cranky sister?",
                                 Answers: {
@@ -131,8 +131,8 @@ $(document).ready(function () {
                     QuestionSeven:{
                         Heading:"The Shining",
                         Image: {
-                           ImageId: "theshining2",
-                           ImageSrc: "assets/images/shining.jpg"
+                           ImageId: "theshining",
+                           ImageSrc: "assets/images/theshining.jpg"
                        },
                        QuestionText:"What does 'All work and no play' make Jack?",
                                 Answers: {
@@ -227,11 +227,11 @@ $(document).ready(function () {
 
       function loadquestions() {
 
-        //
+        
         for (let questionKey in Trivia) {
 
             let question = Trivia[questionKey];
-
+        console.log(questionKey);
         //create well for each questionKey (bootstrap styling)
             let triviaItem =$("<div>");
             triviaItem.addClass("row");
@@ -292,7 +292,7 @@ $(document).ready(function () {
                 let radioButton = $("<input>");
                 radioButton.attr('type', 'radio');
                 radioButton.val(allAnswers[j]);
-                radioButton.attr('name', question);
+                radioButton.attr('name', questionKey);
                 let label = $("<label>");
                 label.text(" " + allAnswers[j]);
                 // add each radioButton and label to the answerBlock
@@ -319,37 +319,78 @@ $(document).ready(function () {
       }
 
 
-      function tallyAnswers() {
+      function tallyResponses() {
+
+// variables for correct answer counter, if question was answered correctly(boolean), unanswered counter, and incorrect counter
+        let correctresponse = 0;
+        let noresponse = 0;
+        let incorrectresponse = 0;
 
         for (let questionKey in Trivia) {
 
             let question = Trivia[questionKey];
-
+          
             
-
-        }
-        
+ // determine if question was answered - was a radio button selected?
+            let response = $('input:radio[name="' + questionKey + '"]:checked').val();
+if(response) {
+ //  Is it the correct answer? Add 1 to result
+if (question.Answers.Correct.includes(response)) {
+    correctresponse++
+}
+  // For wrong answer add 1 to incorrect
+else  {
+            incorrectresponse++;  
+        } 
+        // if no answer selected, add 1 to noresponse
+    } else {
+        noresponse++
     }
+console.log($('input:radio[name="' + questionKey + '"]:checked').val());
+console.log(question.Answers.Correct.includes(response));
+
+    
+};
+ // create results page to replace original question page
+
+ $("#newpage").html('<div id="new"></div>');
+
+ // style for results page
+
+ $("#new").css({
+     'background-color': 'rgb(182, 10, 40)',
+     'height': '320px',
+     'width': '650px',
+     'margin': 'auto',
+     'margin-top': '100px',
+     'border-style': 'solid',
+     'border-color': 'black',
+     'padding-left': '20px',
+     'position': 'relative',
+ });
+
+ // Adding stats and image to results page
+
+ $("#new").html("<h1>Results</h1>");
+ $("#new").append("<h2>Correct: " + correctresponse + "</h2>");
+ $("#new").append("<h2>Incorrect: " + incorrectresponse + "</h2>");
+ $("#new").append("<h2>Unanswered: " + noresponse + "</h2>");
+ $("#new").append("<img id='duckie2' class='inline' src='assets/images/duckie2.jpg'>");
+
+ // styling for image
+
+ $("#duckie2").css({
+     'position': 'absolute',
+     'top': '20px',
+     'right': '80px',
+ });
+}
+
 loadquestions();
-                  
+   // start the timer when the game is loaded
+
+timer();               
              
-  
-   
-  // $("#heading").text(Trivia.QuestionOne.Heading)
-  // $("#imgtitle").text(Trivia.QuestionOne.ImgSrc)
-  // $("#question").text(Trivia.QuestionOne.QuestionText)
-
-    // variables for correct answer counter, if question was answered correctly(boolean), unanswered counter, and incorrect counter
-
-    var result = 0;
-    var answer = 0;
-    var unanswered = 0;
-    var incorrect = 0;
-
-    // start the timer when the game is loaded
-
-    timer();
-
     //    When done button is clicked ....
 
     $("#done").on("click", function () {
@@ -358,68 +399,8 @@ loadquestions();
 
         stop();
 
-        // determine if question was answered - was a radio button selected?
-
-
-
-        if ($('input:radio[name="questionone"]:checked').val()) {
-
-            answer = (document.getElementById("twodollars").checked);
-
-            //  Is it the correct answer? Add 1 to result
-
-            if (answer === true) {
-                result++;
-
-                // For wrong answer add 1 to incorrect
-
-            } else {
-                incorrect++;
-            }
-
-            // if no answer selected, add 1 to unanswered
-
-        } else {
-            unanswered++;
-        }
-
-  
-        // determine how many unanswered questions
-
-        unanswered = 11 - (result + incorrect);
-
-        // create results page to replace original question page
-
-        $("#newpage").html('<div id="new"></div>');
-
-        // style for results page
-
-        $("#new").css({
-            'background-color': 'rgb(216, 55, 55)',
-            'height': '320px',
-            'width': '650px',
-            'margin': 'auto',
-            'margin-top': '100px',
-            'border-style': 'solid',
-            'border-color': 'black',
-            'padding-left': '20px',
-            'position': 'relative',
-        });
-
-        // Adding stats and image to results page
-
-        $("#new").html("<h1>Results</h1>");
-        $("#new").append("<h2>Correct: " + result + "</h2>");
-        $("#new").append("<h2>Incorrect: " + incorrect + "</h2>");
-        $("#new").append("<h2>Unanswered: " + unanswered + "</h2>");
-        $("#new").append("<img id='duckie2' class='inline' src='assets/images/duckie2.jpg'>");
-
-        // styling for image
-
-        $("#duckie2").css({
-            'position': 'absolute',
-            'top': '20px',
-            'right': '80px',
-        });
+        //tally results and display on results page
+        tallyResponses();
+       
     });
 });
