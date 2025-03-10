@@ -7,6 +7,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right top;
+   
     
 
 
@@ -21,16 +22,6 @@
     padding: 20px;
     max-width: 80%;
     width: 100%;
-    
-
-
-  /*  margin-left: 400px;
-    margin-right: 400px;
-    margin-bottom: 40px;
-    margin-top: 40px;
-    */
-    
-
 }
 
 
@@ -45,10 +36,6 @@ body {
    background-image: url(../images/dark-triangles.png);
     color: black;
     text-align: center;
-}
-.jumbotron {
-    background-color: #b60a28;
-    
 }
 
 h1,
@@ -77,9 +64,19 @@ h5 {
     color: black;
 }
 
-label, input {
+.radio-container {
     display: inline-block;
+    flex-wrap: nowrap;
+    gap: 5px;
+    margin: 5px;
+    
 }
+
+input[type="radio"] {
+    margin-right: 5px; 
+    transform: scale(1.1); /* Slightly increase size */
+}
+
 
 #betteroffdead,
 #breakfastclub,

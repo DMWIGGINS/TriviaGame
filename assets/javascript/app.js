@@ -270,17 +270,10 @@ $(document).ready(function () {
           //create a radiobutton for each question with and a label that displays the answer
             let answerBlock = $("<div>");
             for (j = 0; j < allAnswers.length; j++) {
-              //  let label = $("<label>");
-               // let radioButton = $("<input>");
-               // radioButton.attr('type', 'radio');
-               // radioButton.val(allAnswers[j]);
-               // radioButton.attr('name', question);
-               // let span = $("<span>");
-               // span.addClass('wrappable');
-               // span.text(allAnswers[j]);
+             
 
-                //add span to radioButton
-                //radioButton.append(span);
+               let answerOption = $("<div>");
+               answerOption.addClass("radio-container");
 
                 //add radioButton to label
                 //label.append(radioButton);
@@ -296,8 +289,9 @@ $(document).ready(function () {
                 let label = $("<label>");
                 label.text(" " + allAnswers[j]);
                 // add each radioButton and label to the answerBlock
-                answerBlock.append(radioButton);
-                answerBlock.append(label);
+                answerOption.append(radioButton);
+                answerOption.append(label);
+                answerBlock.append(answerOption);
             }
 
             // Add the answerBlock to the triviaItem div
@@ -367,15 +361,17 @@ console.log(question.Answers.Correct.includes(response));
      'border-color': 'black',
      'padding-left': '20px',
      'position': 'relative',
+     'text-align': 'left'
  });
 
  // Adding stats and image to results page
 
  $("#new").html("<h1>Results</h1>");
  $("#new").append("<h2>Correct: " + correctresponse + "</h2>");
+ 
  $("#new").append("<h2>Incorrect: " + incorrectresponse + "</h2>");
  $("#new").append("<h2>Unanswered: " + noresponse + "</h2>");
- $("#new").append("<img id='duckie2' class='inline' src='assets/images/duckie2.jpg'>");
+ $("#new").append("<img id='duckie2' src='assets/images/duckie2.jpg'>");
 
  // styling for image
 
