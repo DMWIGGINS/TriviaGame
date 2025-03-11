@@ -8,12 +8,13 @@
     background-size: cover;
     background-position: right top;
    
+   
     
 
 
    
 }
-#moviescreen {
+.moviescreen {
     background-color:white;
     border-style: solid;
     border-color: black;
@@ -27,7 +28,7 @@
 
 .well {
     margin-top: 0px;
-    margin-bottom: 75px;
+    margin-bottom: 50px;
     background-color: #b60a28;
 }
 

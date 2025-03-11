@@ -359,16 +359,17 @@ console.log(question.Answers.Correct.includes(response));
      'margin-top': '100px',
      'border-style': 'solid',
      'border-color': 'black',
-     'padding-left': '20px',
+     'padding-left': '80px',
      'position': 'relative',
-     'text-align': 'left'
+     'text-align': 'left',
+     'padding-top': '30px'
+     
  });
 
  // Adding stats and image to results page
 
- $("#new").html("<h1>Results</h1>");
+ $("#new").append("<h1>Results</h1>");
  $("#new").append("<h2>Correct: " + correctresponse + "</h2>");
- 
  $("#new").append("<h2>Incorrect: " + incorrectresponse + "</h2>");
  $("#new").append("<h2>Unanswered: " + noresponse + "</h2>");
  $("#new").append("<img id='duckie2' src='assets/images/duckie2.jpg'>");
