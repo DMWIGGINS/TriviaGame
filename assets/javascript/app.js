@@ -18,6 +18,7 @@ $(document).ready(function () {
         alert('Sorry you are out of time!')
       }, 100)
       stop()
+      tallyResponses()
     } else {
       $('#timeleft').text(number)
       number--
@@ -181,7 +182,7 @@ $(document).ready(function () {
   function loadquestions() {
     for (let questionKey in Trivia) {
       let question = Trivia[questionKey]
-      console.log(questionKey)
+      
       //create well for each questionKey (bootstrap styling)
       let triviaItem = $('<div>')
       triviaItem.addClass('row')
@@ -189,7 +190,6 @@ $(document).ready(function () {
       //add row class (bootstrap styling)
       let well = $('<div>')
       well.addClass('well')
-      //triviaItem.append(well);
 
       //add heading
       let heading = $('<h2>')
@@ -286,16 +286,14 @@ $(document).ready(function () {
         noresponse++
       }
     }
+
     // create results page to replace original question page
     $('#newpage').html('<div id="new"></div>')
-
     $('#new').addClass('row')
-
     let movie = $('<div>')
     movie.addClass('moviescreen')
 
     // style for results page
-
     $('#new').css({
       'background-image':
         'url(assets/images/rob-laughter-WW1jsInXgwM-unsplash.jpg)',
@@ -312,7 +310,7 @@ $(document).ready(function () {
       firstRow.append("<img id='duckie2' src='assets/images/duckie2.jpg'>")
     } else if (correctresponse > 7) {
       firstRow.append(
-        '<h2>Not too bad but brush up on your wrong answers shown below!</h2>'
+        "<h2>Not too bad but brush up on your wrong answers shown below!</h2>"
       )
     } else {
       firstRow.append(
@@ -323,6 +321,7 @@ $(document).ready(function () {
     firstRow.append('<h4>Unanswered: ' + noresponse + '</h4>')
     firstRow.append('<h4>Incorrect: ' + incorrectresponse + '</h4>')
 
+    // styling for firstRow
     firstRow.css({
       'padding-top': '20px',
     })
