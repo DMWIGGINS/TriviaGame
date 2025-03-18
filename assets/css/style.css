@@ -1,83 +1,88 @@
-
 #intro {
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    background-image: url(../images/rob-laughter-WW1jsInXgwM-unsplash.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: right top;
-   
-   
-    
-
-
-   
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-image: url(../images/rob-laughter-WW1jsInXgwM-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right top;
 }
+
 .moviescreen {
-    background-color:white;
-    border-style: solid;
-    border-color: black;
-    border-width: 5px;
-    margin: 40px auto;
-    padding: 20px;
-    max-width: 80%;
-    width: 100%;
+  background-color: white;
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 80%;
+  width: 100%;
 }
-
 
 .well {
-    margin-top: 0px;
-    margin-bottom: 50px;
-    background-color: #b60a28;
+  margin-top: 0px;
+  margin-bottom: 50px;
+  background-color: #b60a28;
 }
 
-
 body {
-   background-image: url(../images/dark-triangles.png);
-    color: black;
-    text-align: center;
+  background-image: url(../images/dark-triangles.png);
+  color: black;
+  text-align: center;
 }
 
 h1,
-h3 { 
-    font-family: "Figtree", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 900;
-    font-style: normal;
-    color: black;
+h2 {
+  font-family: 'Figtree', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  color: black;
 }
 
-h2,
+h3 {
+  font-family: 'Figtree', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  color: black;
+}
+
+h4,
 h5 {
-    font-family: "Figtree", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    color: black;
+  font-family: 'Figtree', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: black;
+}
+
+p {
+  font-family: 'Figtree', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: black;
 }
 
 .answer {
-    font-family: "Figtree", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 900;
-    font-style: normal;
-    color: black;
+  font-family: 'Figtree', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  color: black;
 }
 
 .radio-container {
-    display: inline-block;
-    flex-wrap: nowrap;
-    gap: 5px;
-    margin: 5px;
-    
+  display: inline-block;
+  flex-wrap: nowrap;
+  gap: 5px;
+  margin: 5px;
 }
 
-input[type="radio"] {
-    margin-right: 5px; 
-    transform: scale(1.1); /* Slightly increase size */
+input[type='radio'] {
+  margin-right: 5px;
+  transform: scale(1.1); /* Slightly increase size */
 }
-
 
 #betteroffdead,
 #breakfastclub,
@@ -92,21 +97,25 @@ input[type="radio"] {
 #duckie,
 #duckie2,
 #molly {
-    border-width: 2px;
-    border-color: black;
-    border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
 }
 
 #timeleft {
-    font-size: 40px;
-    font-weight: bolder;
-    color: rgb(194, 37, 37);
+  font-size: 40px;
+  font-weight: bolder;
+  color: rgb(194, 37, 37);
 }
 
+#done {
+  color: white;
+  background-color: rgb(182, 10, 40);
+  margin-bottom: 10px;
+}
 
-#done { 
-    color: white;
-    background-color:rgb(182, 10, 40);
-    margin-bottom: 10px;
-
+#checkAnswers {
+  color: white;
+  background-color: rgb(182, 10, 40);
+  margin-top: 20px;
 }
