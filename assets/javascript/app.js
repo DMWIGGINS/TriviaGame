@@ -1,34 +1,36 @@
 $(document).ready(function () {
   // set variables for timer
 
-  var number = 60
-  var intervalId
+  var number = 60;
+  var intervalId;
 
   // create timer to countdown
 
   function timer() {
-    intervalId = setInterval(decrement, 1000)
+    intervalId = setInterval(decrement, 1000);
   }
 
   // timer should stop at 0
   function decrement() {
     if (number === 0) {
-      $('#timeleft').text(number)
+      $('#timeleft').text(number);
       setTimeout(function () {
-        alert('Sorry you are out of time!')
-      }, 100)
-      stop()
-      tallyResponses()
+       $("#outoftimeModal").modal("show");
+      }, 100);
+      stop();
+      tallyResponses();
     } else {
-      $('#timeleft').text(number)
-      number--
+      $('#timeleft').text(number);
+      number--;
     }
   }
-
+$("#outoftimeConfirm").on("click", function (){
+  $("#outoftimeModal").modal("hide");
+});
   // when timer gets to 0 it resets
 
   function stop() {
-    clearInterval(intervalId)
+    clearInterval(intervalId);
   }
 
   // storing the questions and answers in an object so program is easy to reuse with new questions
@@ -169,7 +171,7 @@ $(document).ready(function () {
         ImageId: 'molly',
         ImageSrc: 'assets/images/molly.jpg',
       },
-      QuestionText: 'Which of the following movies did NOT star Molly Ringwald',
+      QuestionText: 'Which of the following movies did NOT star Molly Ringwald?',
       Answers: {
         Correct: ["St Elmo's Fire"],
         Incorrect: ['Sixteen Candles', 'The Breakfast Club', 'Pretty in Pink'],
@@ -181,161 +183,216 @@ $(document).ready(function () {
 
   function loadquestions() {
     for (let questionKey in Trivia) {
-      let question = Trivia[questionKey]
+      let question = Trivia[questionKey];
       
       //create well for each questionKey (bootstrap styling)
-      let triviaItem = $('<div>')
-      triviaItem.addClass('row')
+      let triviaItem = $('<div>');
+      triviaItem.addClass('row');
 
       //add row class (bootstrap styling)
-      let well = $('<div>')
-      well.addClass('well')
+      let well = $('<div>');
+      well.addClass('well');
 
       //add heading
-      let heading = $('<h2>')
-      heading.text(question.Heading)
-      well.append(heading)
+      let heading = $('<h2>');
+      heading.text(question.Heading);
+      well.append(heading);
 
       //add image
       let image = $('<img>')
-      image.attr('id', question.Image.ImageId)
-      image.attr('src', question.Image.ImageSrc)
-      well.append(image)
+      image.attr('id', question.Image.ImageId);
+      image.attr('src', question.Image.ImageSrc);
+      well.append(image);
 
       //add question text
-      let quizItem = $('<h4>')
-      quizItem.text(question.QuestionText)
-      well.append(quizItem)
+      let quizItem = $('<h4>');
+      quizItem.text(question.QuestionText);
+      well.append(quizItem);
 
       //put correct and incorrect answers in array and shuffle
-      let correctAnswers = question.Answers.Correct
-      let incorrectAnswers = question.Answers.Incorrect
-      let allAnswers = correctAnswers.concat(incorrectAnswers)
+      let correctAnswers = question.Answers.Correct;
+      let incorrectAnswers = question.Answers.Incorrect;
+      let allAnswers = correctAnswers.concat(incorrectAnswers);
       allAnswers.sort(function () {
-        return Math.random() - 0.5
-      })
+        return Math.random() - 0.5;
+      });
 
       //create a radiobutton for each question with and a label that displays the answer
-      let answerBlock = $('<div>')
+      let answerBlock = $('<div>');
       for (j = 0; j < allAnswers.length; j++) {
-        let answerOption = $('<div>')
-        answerOption.addClass('radio-container')
-        let radioButton = $('<input>')
-        radioButton.attr('type', 'radio')
-        radioButton.val(allAnswers[j])
-        radioButton.attr('name', questionKey)
-        let label = $('<label>')
-        label.text(' ' + allAnswers[j])
+        let answerOption = $('<div>');
+        answerOption.addClass('radio-container');
+        let radioButton = $('<input>');
+        radioButton.attr('type', 'radio');
+        radioButton.val(allAnswers[j]);
+        radioButton.attr('name', questionKey);
+        let label = $('<label>');
+        label.text(' ' + allAnswers[j]);
 
         // add each radioButton and label to the answerBlock
-        answerOption.append(radioButton)
-        answerOption.append(label)
-        answerBlock.append(answerOption)
+        answerOption.append(radioButton);
+        answerOption.append(label);
+        answerBlock.append(answerOption);
       }
 
       // Add the answerBlock to the triviaItem div
-      well.append(answerBlock)
-      triviaItem.append(well)
-      console.log(incorrectAnswers)
-      console.log(correctAnswers)
-      console.log(allAnswers)
+      well.append(answerBlock);
+      triviaItem.append(well);
+      console.log(incorrectAnswers);
+      console.log(correctAnswers);
+      console.log(allAnswers);
 
       // Add the trivaItem to the #triviaquestions div
-      $('#triviaquestions').append(triviaItem)
+      $('#triviaquestions').append(triviaItem);
     }
   }
 
   function tallyResponses() {
-    let answerDetails = $('<div>').addClass('row')
+    let answerDetails = $('<div>').addClass('row');
 
     // variables for correct answer counter, if question was answered correctly(boolean), unanswered counter, and incorrect counter
-    let correctresponse = 0
-    let noresponse = 0
-    let incorrectresponse = 0
+    let correctresponse = 0;
+    let noresponse = 0;
+    let incorrectresponse = 0;
 
     for (let questionKey in Trivia) {
-      let question = Trivia[questionKey]
+      let question = Trivia[questionKey];
 
       // determine if question was answered - was a radio button selected?
 
-      let response = $('input:radio[name="' + questionKey + '"]:checked').val()
+      let response = $('input:radio[name="' + questionKey + '"]:checked').val();
       if (response) {
         //  Is it the correct answer? Add 1 to result
         if (question.Answers.Correct.includes(response)) {
-          correctresponse++
+          correctresponse++;
         }
         // For wrong answer add 1 to incorrect
         else {
-          incorrectresponse++
-          let displayresponse = $('<div>')
-          displayresponse.append('<h3>' + question.Heading + '</h3>')
-          console.log(question.Heading)
-          displayresponse.append('<p>' + question.QuestionText + '</p>')
-          console.log(question.QuestionText)
-          displayresponse.append('<p>Your Answer: ' + response + '</p>')
-          console.log(response)
-          displayresponse.append(
-            '<p>Correct Answer: ' + question.Answers.Correct + '</p>'
-          )
-          console.log(question.Answers.Correct)
+          incorrectresponse++;
+          let displayresponse = $('<div>');
+          displayresponse.append('<h3>' + question.Heading + '</h3>');
+          console.log(question.Heading);
+          
+          displayresponse.append('<p>' + question.QuestionText + '</p>').css
+          console.log(question.QuestionText);
+          let wrongAnswer = $('<p><b>Your Answer: </b>' + response + '</p>').css({"color": "red"});
+          displayresponse.append(wrongAnswer);
 
-          answerDetails.append(displayresponse)
+          console.log(response);
+          let correctedAnswer = $('<p><b>Correct Answer: </b>' + question.Answers.Correct + '</p>').css({"color": "green"});
+          displayresponse.append(correctedAnswer);
+          console.log(question.Answers.Correct);
+          answerDetails.append(displayresponse);
         }
         // if no answer selected, add 1 to noresponse
       } else {
-        noresponse++
+        noresponse++;
       }
     }
 
+
+  function colorResponses() {
+    let correctresponseDisplay = $('<h4>Correct: ' + correctresponse + '</h4>').css({"color": "green"});
+    firstRow.append(correctresponseDisplay);
+    let noresponseDisplay = $('<h4>Unanswered: ' + noresponse + '</h4>').css({"color": "blue"});
+    firstRow.append(noresponseDisplay);
+    let wronganswerDisplay = $('<h4>Incorrect: ' + incorrectresponse + '</h4>').css({"color": "red"});
+    firstRow.append(wronganswerDisplay);
+    };
     // create results page to replace original question page
-    $('#newpage').html('<div id="new"></div>')
-    $('#new').addClass('row')
-    let movie = $('<div>')
-    movie.addClass('moviescreen')
+    $('#newpage').html('<div id="new"></div>');
+    $('#new').addClass('row');
+    let movie = $('<div>');
+    movie.addClass('moviescreen');
 
     // style for results page
     $('#new').css({
       'background-image':
-        'url(assets/images/rob-laughter-WW1jsInXgwM-unsplash.jpg)',
+      'url(assets/images/rob-laughter-WW1jsInXgwM-unsplash.jpg)',
       'background-repeat': 'no-repeat',
       'background-size': 'cover',
       'background-position': 'right top',
       'margin-bottom': '0px',
+      'border-bottom-style': 'solid',
+      'border-bottom-width': '1px',
+      'border-bottom-color': 'white',
     })
 
     // Adding stats and image to results page
-    let firstRow = $('<div>').addClass('row')
+    let firstRow = $('<div>').addClass('row');
+
+    let finalimage = $('<img>').attr('Id', 'duckie2');
+    finalimage.attr('src', 'assets/images/duckie2.jpg');
+     // styling for image
+    finalimage.css({
+      'margin-top': '20px',
+      'max-width': '100%',
+      height: 'auto',
+    });
+
+    let popcorn = $('<img>').attr('Id', 'popcorn');
+    popcorn.attr('src', 'assets/images/popcorn-vitya-lapatey-Q-dusXpAH0I-unsplash.jpg');
+     popcorn.css({
+      'margin-top': '20px',
+      'max-width': '100%',
+      height: 'auto',
+    });
+
+     let thumbsup= $('<img>').attr('Id', 'thumbsup');
+    thumbsup.attr('src', 'assets/images/johan-godinez-dDYRYivNzbI-unsplash.jpg');
+     thumbsup.css({
+      'margin-top': '20px',
+      'max-width': '100%',
+      height: 'auto',
+    });
+
+     let watchmovies = $('<img>').attr('Id', 'watchmovies');
+    watchmovies.attr('src', 'assets/images/will-goodman-ZvJvTNm7CMo-unsplash.jpg');
+     watchmovies.css({
+      'margin-top': '20px',
+      'max-width': '100%',
+      height: 'auto',
+    });
+
+
     if (correctresponse === 11) {
-      firstRow.append("<h2>Congratulations!  You are an 80's Movie Guru!</h2>")
-      firstRow.append("<img id='duckie2' src='assets/images/duckie2.jpg'>")
-    } else if (correctresponse > 7) {
-      firstRow.append(
-        "<h2>Not too bad but brush up on your wrong answers shown below!</h2>"
-      )
-    } else {
-      firstRow.append(
-        "<h2>I think you need an 80's movie marathon!  See answers below!</h2>"
-      )
+      firstRow.append("<h2>Congratulations!  You are an 80's Movie Guru!</h2>");
+      colorResponses();
+      firstRow.append(finalimage);
+    
+    } else if (correctresponse > 7 && correctresponse < 11) {
+      firstRow.append("<h2>Not too bad but brush up on your wrong answers shown below!</h2>");
+      colorResponses();
+      firstRow.append(thumbsup);
+    } else if (noresponse === 11) {
+      firstRow.append("<h2>Did you step out for popcorn?  I hope you brought some for me!</h2>");
+      colorResponses();
+      firstRow.append(popcorn);
     }
-    firstRow.append('<h4>Correct: ' + correctresponse + '</h4>')
-    firstRow.append('<h4>Unanswered: ' + noresponse + '</h4>')
-    firstRow.append('<h4>Incorrect: ' + incorrectresponse + '</h4>')
+     else {
+      firstRow.append("<h2>I think you need an 80's movie marathon!  See incorrect answers below!</h2>");
+      colorResponses();
+      firstRow.append(watchmovies);
+    }
+
+  
+
+  
+    
 
     // styling for firstRow
     firstRow.css({
-      'padding-top': '20px',
-    })
+      'padding': '20px',
+    });
 
-    movie.append(firstRow)
-    movie.append(answerDetails)
 
-    $('#new').append(movie)
+   
+    movie.append(firstRow);
+    movie.append(answerDetails);
 
-    // styling for image
-    $('#duckie2').css({
-      'max-width': '100%',
-      height: 'auto',
-    })
+    $('#new').append(movie);
+
+   
   };
 
  // display trivia questions when the game is loaded
@@ -353,6 +410,6 @@ $(document).ready(function () {
 
     //tally results and display on results page
     tallyResponses();
-  })
+  });
 });
 

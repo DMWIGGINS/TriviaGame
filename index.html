@@ -29,6 +29,24 @@
 
 </head>
 
+<div id="outoftimeModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="confirmLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span>&times;</span>
+        </button>
+        <h4 class="modal-title" id="confirmLabel"></h4>
+      </div>
+      <div class="modal-body">
+        <p>Time's Up!</p>
+      </div>
+      <div class="modal-footer">
+        <button id="outoftimeConfirm" type="button" class="btn">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
 <body>
     <div id="container">
         <div id="newpage">
@@ -39,7 +57,7 @@
                     <!-- game heading -->
                     <h1 id="title">80's MOVIE TRIVIA</h1>
                     <div>
-                        <h3>Answer as many questions as you can before time runs out!</h3>
+                        <h3 id="instructions">Answer as many questions as you can before time runs out!</h3>
                     </div>
 
                     <!-- timer countdown -->
