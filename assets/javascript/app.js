@@ -56,7 +56,7 @@ $("#outoftimeConfirm").on("click", function (){
       },
       QuestionText: "Why is the 'crazy girl' in detention?",
       Answers: {
-        Correct: ['She had nothing better to do on a Saturday'],
+        Correct: ['She had nothing better to do on Saturday'],
         Incorrect: [
           'She tripped a popular kid in the cafeteria',
           'She is a mole for the teachers',
@@ -227,7 +227,7 @@ $("#outoftimeConfirm").on("click", function (){
         radioButton.val(allAnswers[j]);
         radioButton.attr('name', questionKey);
         let label = $('<label>');
-        label.text(' ' + allAnswers[j]);
+        label.text(allAnswers[j]);
 
         // add each radioButton and label to the answerBlock
         answerOption.append(radioButton);
