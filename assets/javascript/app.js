@@ -1,7 +1,7 @@
 $(document).ready(function () {
   // set variables for timer
 
-  var number = 60;
+  var number = 90;
   var intervalId;
 
   // create timer to countdown
