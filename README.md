@@ -12,7 +12,7 @@ Red Curtain Photo by <a href="https://unsplash.com/@roblaughter?utm_content=cred
 
 I have taken the old version on the Master branch and added a few updgrades!  It is now a reusable game where the trivia can be switched out with a new Trivia object.  Layout is now created using jQuery instead of staticly lurking in HTML.
 
-See the Update branch for this new version which is available to play on https://dmwiggins.github.io/TriviaGame/
+See the ***Update branch*** for this new version which is available to play on https://dmwiggins.github.io/TriviaGame/
 
 *Created with HTML, CSS, JavaScript and jQuery*
 
