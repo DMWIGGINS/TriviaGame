@@ -9,7 +9,6 @@
   border-bottom-style: solid;
   border-bottom-width: 1px;
   border-bottom-color: white;
-
 }
 
 .moviescreen {
@@ -21,7 +20,7 @@
   margin: 40px auto;
   max-width: 80%;
   background-repeat: no-repeat;
-  background-size: cover;  
+  background-size: cover;
 }
 
 .well {
@@ -119,23 +118,24 @@ input[type='radio'] {
   font-weight: bolder;
   color: rgb(194, 37, 37);
 }
-.modal-content{
+.modal-content {
   border-style: solid;
   border-width: 3px;
   border-color: black;
 }
-.modal-header, .modal-footer {
+.modal-header,
+.modal-footer {
   background-image: url(../images/dark-triangles.png);
 }
 
 .modal-body {
-  background-color:white;
+  background-color: white;
   color: black;
   font-family: 'Figtree', sans-serif;
   font-size: 20px;
   font-weight: 600;
 }
-#outoftimeConfirm{
+#outoftimeConfirm {
   color: white;
   background-color: rgb(182, 10, 40);
 }
@@ -149,8 +149,6 @@ input[type='radio'] {
   color: white;
   font-size: 20px;
   font-weight: 600;
-
-  
 }
 
 #checkAnswers {
@@ -159,9 +157,59 @@ input[type='radio'] {
   margin-top: 20px;
 }
 
-@media only screen and (max-width: 445px) {
-   
+#questionText {
+  font-size: 16px;
+}
 
+#correctResponseDisplay {
+  color: green;
+  padding-top: 10px;
+}
+
+#correctAnswer {
+  color: green;
+  padding-bottom: 10px;
+  font-size: 16px;
+}
+
+#incorrectResponseDisplay {
+  color: red;
+}
+
+#wrongAnswer {
+  color: red;
+  font-size: 16px;
+}
+
+#noResponseDisplay {
+  color: blue;
+}
+
+#new {
+  background-image: url(../images/rob-laughter-WW1jsInXgwM-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right top;
+  margin-bottom: 0px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: white;
+}
+
+#firstRow {
+  padding: 20px;
+}
+
+#duckie2,
+#popcorn,
+#thumbsUp,
+#watchMovies {
+  margin-top: 20px;
+  max-width: 100%;
+  height: auto;
+}
+
+@media only screen and (max-width: 445px) {
   #title {
     font-size: 28px;
   }
@@ -169,6 +217,4 @@ input[type='radio'] {
   #instructions {
     font-size: 18px;
   }
- 
-  
 }

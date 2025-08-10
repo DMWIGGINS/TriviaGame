@@ -2,33 +2,31 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>TriviaGame</title>
-    <!-- reset for same rendering across browsers -->
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
-    <!-- We need to bring in the bootstrap CSS -->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
-        rel="stylesheet">
-    <script src="assets/javascript/app.js"></script>
-    <link rel="stylesheet" type="text/css" href="assets/images">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TriviaGame</title>
+  <!-- reset for same rendering across browsers -->
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <!-- We need to bring in the bootstrap CSS -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+  <script src="assets/javascript/app.js"></script>
+  <link rel="stylesheet" type="text/css" href="assets/images">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
-
 <div id="outoftimeModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="confirmLabel">
   <div class="modal-dialog modal-sm" role="document">
     <div class="modal-content">
@@ -48,40 +46,26 @@
   </div>
 </div>
 <body>
-    <div id="container">
-        <div id="newpage">
-            <div id="intro" class="row">
-
-                <div class="moviescreen">
-
-                    <!-- game heading -->
-                    <h1 id="title">80's MOVIE TRIVIA</h1>
-                    <div>
-                        <h3 id="instructions">Answer as many questions as you can before time runs out!</h3>
-                    </div>
-
-                    <!-- timer countdown -->
-                    <div id="timeleft"></div>
-
-                </div>
-            </div>
-
-
-            <form id="triviaquestions">
-
-
-            </form>
-            <div class="row">
-
-                <!-- Button to show when finished answering.  This stops the timer and triggers the results to be tallied and displayed. -->
-                <button type="button" id="done" class="btn btn-lg">Done</button>
-            </div>
-
-
+  <div id="container">
+    <div id="newpage">
+      <div id="intro" class="row">
+        <div class="moviescreen">
+          <!-- game heading -->
+          <h1 id="title">80's MOVIE TRIVIA</h1>
+          <div>
+            <h3 id="instructions">Answer as many questions as you can before time runs out!</h3>
+          </div>
+          <!-- timer countdown -->
+          <div id="timeleft"></div>
         </div>
+      </div>
+      <form id="triviaquestions">
+      </form>
+      <div class="row">
+        <!-- Button to show when finished answering.  This stops the timer and triggers the results to be tallied and displayed. -->
+        <button type="button" id="done" class="btn btn-lg">Done</button>
+      </div>
     </div>
-
+  </div>
 </body>
-
-
 </html>
