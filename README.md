@@ -13,7 +13,7 @@ See the ***Update branch*** for this new version which is available to play on h
 
 Red Curtain Photo by <a href="https://unsplash.com/@roblaughter?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Rob Laughter</a> on <a href="https://unsplash.com/photos/red-theater-curtain-WW1jsInXgwM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 
-## Save Ferris! ##
+### Save Ferris! 
 
 <img id="ferris" src="assets/images/ferris.jpg">  
 
