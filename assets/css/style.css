@@ -1,45 +1,220 @@
-.row {
-    text-align: center;
+#intro {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-image: url(../images/rob-laughter-WW1jsInXgwM-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right top;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: white;
+}
+
+.moviescreen {
+  background-color: white;
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+  padding: 5px;
+  margin: 40px auto;
+  max-width: 80%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.well {
+  margin-top: 0px;
+  margin-bottom: 50px;
+  background-color: #b60a28;
 }
 
 body {
-    background-image: url(../images/dark-triangles.png);
-    color: black;
+  background-image: url(../images/dark-triangles.png);
+  color: black;
+  text-align: center;
 }
 
 h1,
-h3 {
-    font-family: 'Fascinate Inline', cursive;
-    color: black;
+h2 {
+  font-family: 'Figtree', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  color: black;
 }
 
-h2,
+h3 {
+  font-family: 'Figtree', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  color: black;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+h4,
 h5 {
-    color: black;
+  font-family: 'Figtree', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: black;
+}
+
+p {
+  font-family: 'Figtree', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: black;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.answer {
+  font-family: 'Figtree', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  color: black;
+}
+
+.radio-container {
+  display: inline-block;
+  flex-wrap: nowrap;
+  gap: 5px;
+  margin: 5px;
+}
+
+input[type='radio'] {
+  margin-right: 5px;
+  transform: scale(1.1); /* Slightly increase size */
 }
 
 #betteroffdead,
 #breakfastclub,
 #karatekid,
 #beetlejuice,
-#theshining2,
+#theshining,
 #dirtydancing,
 #princessbride,
 #weirdscience,
 #ferris,
+#ferrisandfriends,
 #duckie,
 #duckie2,
-#molly {
-    border-width: 2px;
-    border-color: black;
-    border-style: solid;
-}
-
-.well {
-    background-color: rgb(216, 55, 55);
+#molly,
+#popcorn,
+#watchmovies,
+#thumbsup {
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
 }
 
 #timeleft {
-    font-size: 20px;
-    color: rgb(104, 1, 1);
+  font-size: 40px;
+  font-weight: bolder;
+  color: rgb(194, 37, 37);
+}
+.modal-content {
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
+}
+.modal-header,
+.modal-footer {
+  background-image: url(../images/dark-triangles.png);
+}
+
+.modal-body {
+  background-color: white;
+  color: black;
+  font-family: 'Figtree', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+#outoftimeConfirm {
+  color: white;
+  background-color: rgb(182, 10, 40);
+}
+
+#done {
+  color: white;
+  background-color: rgb(182, 10, 40);
+  margin-bottom: 10px;
+}
+.close {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#checkAnswers {
+  color: white;
+  background-color: rgb(182, 10, 40);
+  margin-top: 20px;
+}
+
+#questionText {
+  font-size: 16px;
+}
+
+#correctResponseDisplay {
+  color: green;
+  padding-top: 10px;
+}
+
+#correctAnswer {
+  color: green;
+  padding-bottom: 10px;
+  font-size: 16px;
+}
+
+#incorrectResponseDisplay {
+  color: red;
+}
+
+#wrongAnswer {
+  color: red;
+  font-size: 16px;
+}
+
+#noResponseDisplay {
+  color: blue;
+}
+
+#new {
+  background-image: url(../images/rob-laughter-WW1jsInXgwM-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right top;
+  margin-bottom: 0px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: white;
+}
+
+#firstRow {
+  padding: 20px;
+}
+
+#duckie2,
+#popcorn,
+#thumbsUp,
+#watchMovies {
+  margin-top: 20px;
+  max-width: 100%;
+  height: auto;
+}
+
+@media only screen and (max-width: 445px) {
+  #title {
+    font-size: 28px;
+  }
+
+  #instructions {
+    font-size: 18px;
+  }
 }
