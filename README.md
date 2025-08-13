@@ -16,7 +16,7 @@ This new version is available to play on https://dmwiggins.github.io/TriviaGame/
 
 <img id="ferris" src="assets/images/ferris.jpg">  
 
-
+### Credits
 
 Red Curtain Photo by <a href="https://unsplash.com/@roblaughter?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Rob Laughter</a> on <a href="https://unsplash.com/photos/red-theater-curtain-WW1jsInXgwM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 
