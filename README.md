@@ -5,7 +5,7 @@
 
 ![movie screen with the words 80's movie trivia](https://github.com/DMWIGGINS/DMWIGGINS.github.io/blob/master/assets/images/moviescreenthumbnail.png)
 
-I have taken the old version and added a few upgrades!  It is now a reusable game where the trivia can be switched out with a new Trivia object.  Layout is created using jQuery instead of staticly lurking in HTML.  [old.html](assets/images/oldhtml.png)
+I have taken the old version and added a few upgrades!  It is now a reusable game where the trivia can be switched out with a new Trivia object.  Layout is created using jQuery instead of staticly lurking in HTML.  [snippet of old html](assets/images/oldhtml.png)
 
 This new version is available to play on https://dmwiggins.github.io/TriviaGame/
 
